@@ -7,6 +7,7 @@ import { RepoData } from '../structures/repoData';
   providedIn: 'root'
 })
 export class GithubService {
+  // TODO Pull today's date and use it instead of 2017-10-22
   //private githubEndpoint = 'https://api.github.com/search/repositories?q=created:>2017-10-22&sort=stars&order=desc';
   private githubEndpoint = '/assets/github-example.json';
 
@@ -15,6 +16,8 @@ export class GithubService {
   ) { }
 
   getGithubRepoInfo(): Observable<RepoData> {
+    //TODO Add ability to specify page
+
     return this.http.get<RepoData>(this.githubEndpoint, {
       'responseType': 'json'
     });

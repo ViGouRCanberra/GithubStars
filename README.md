@@ -35,3 +35,8 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 - Added Bootstrap for its grid layout ability and helpere CSS
 - Used the CDN for this assignment, but would rather prefer a downloaded copy for prod. You never know when a DDOS distrupts services.
 - Used Bootstrap instead of Angular Material because it is what I'm familiar with, and could do the styling I wanted quickest. Also used v4 instead of v5 for the same reason. Didn't want to take a change on possible differences to what I'm used to.
+
+`Angular Infinite Scroll` (npm i ngx-infinite-scroll@10.0.0)
+- Added Angular Infinite scroll to detect scrolling to bottom to load more results
+- It's 2 years old with a publish in the last 2 months. Seems to be kept up to date well
+- Seems to be pretty widely used as well with loads of downloads a month

@@ -1,4 +1,11 @@
-<div *ngIf="repos != undefined">
+<div 
+    *ngIf="repos != undefined"
+    class="search-results"
+    infinite-scroll
+    [infiniteScrollDistance]="1"
+    [infiniteScrollThrottle]="50"
+    (scrolled)="onScroll()"
+>
     <div *ngFor="let repo of repos.items">
         <app-repo-card
             [repo]="repo"

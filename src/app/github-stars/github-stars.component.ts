@@ -17,4 +17,10 @@ export class GithubStarsComponent implements OnInit {
   ngOnInit(): void {
     this.githubService.getGithubRepoInfo().subscribe((data) => this.repos = data);
   }
+
+  onScroll() {
+    console.log('scrolled!!');
+
+    //TODO Implement calling githubService with a page counter
+  }
 }
