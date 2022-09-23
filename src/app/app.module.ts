@@ -8,6 +8,7 @@ import { CommonModule } from '@angular/common';
 import { AppComponent } from './app.component';
 import { GithubStarsComponent } from './github-stars/github-stars.component';
 import { RepoCardComponent } from './repo-card/repo-card.component';
+import { DateAgoPipe } from './pipes/date-ago.pipe';
 
 @NgModule({
   imports: [
@@ -23,6 +24,7 @@ import { RepoCardComponent } from './repo-card/repo-card.component';
     AppComponent,
     GithubStarsComponent,
     RepoCardComponent,
+    DateAgoPipe,
   ],
   providers: [],
   bootstrap: [AppComponent]

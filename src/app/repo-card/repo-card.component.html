@@ -1,2 +1,16 @@
-id: {{ repo.id }}
-name: {{ repo.name }}
+<div class="container mb-4 mt-3">
+    <div class="row">
+        <div class="col-2 pt-1">
+            <img class="avatar" [src]="repo.owner.avatar_url" />
+        </div>
+        <div class="col-10">
+            <div class="repo-title">{{ repo.name }}</div>
+            <div class="repo-description">{{ repo.description }}</div>
+            <div>
+                <span class="badge badge-pill badge-info mr-2">Stars: {{ repo.stargazers_count }}</span>
+                <span class="badge badge-pill badge-warning mr-2">Issues: {{ repo.open_issues_count }}</span>
+                <span>Submitted {{ repo.created_at | dateAgo }} by {{ repo.owner.login }}</span>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,15 @@
+.avatar {
+    height: 98px;
+    width: 98px;
+    float: right;
+}
+
+.repo-title {
+    font-size: x-large;
+    font-weight: bold;
+    margin-bottom: 7px;
+}
+
+.repo-description {
+    margin-bottom: 10px;
+}
