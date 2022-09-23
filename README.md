@@ -25,3 +25,13 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## External libraries added
+
+`dateAgo Pipe from Github` 
+- Added this snippet from Github to enable me to do the "30 days ago"
+
+`Bootstrap v4`
+- Added Bootstrap for its grid layout ability and helpere CSS
+- Used the CDN for this assignment, but would rather prefer a downloaded copy for prod. You never know when a DDOS distrupts services.
+- Used Bootstrap instead of Angular Material because it is what I'm familiar with, and could do the styling I wanted quickest. Also used v4 instead of v5 for the same reason. Didn't want to take a change on possible differences to what I'm used to.
