@@ -7,6 +7,7 @@ import { CommonModule } from '@angular/common';
 
 import { AppComponent } from './app.component';
 import { GithubStarsComponent } from './github-stars/github-stars.component';
+import { RepoCardComponent } from './repo-card/repo-card.component';
 
 @NgModule({
   imports: [
@@ -21,6 +22,7 @@ import { GithubStarsComponent } from './github-stars/github-stars.component';
   declarations: [
     AppComponent,
     GithubStarsComponent,
+    RepoCardComponent,
   ],
   providers: [],
   bootstrap: [AppComponent]

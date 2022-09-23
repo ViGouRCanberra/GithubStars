@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { GithubService } from '../services/github.service';
+import { RepoData } from '../structures/repoData';
 
 @Component({
   selector: 'app-github-stars',
@@ -7,7 +8,7 @@ import { GithubService } from '../services/github.service';
   styleUrls: ['./github-stars.component.css']
 })
 export class GithubStarsComponent implements OnInit {
-  repos;
+  repos: RepoData;
 
   constructor(
     private githubService: GithubService

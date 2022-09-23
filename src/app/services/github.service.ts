@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { RepoData } from '../structures/repoData';
 
 @Injectable({
   providedIn: 'root'
@@ -12,8 +13,8 @@ export class GithubService {
     private http: HttpClient
   ) { }
 
-  getGithubRepoInfo(): Observable<any[]> {
-    return this.http.get<any[]>(this.githubEndpoint, {
+  getGithubRepoInfo(): Observable<RepoData> {
+    return this.http.get<RepoData>(this.githubEndpoint, {
       'responseType': 'json'
     });
   }

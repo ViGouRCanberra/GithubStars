@@ -1,7 +1,6 @@
 <div *ngIf="repos">
-    Count: {{ repos.total_count }}
-
     <div *ngFor="let repo of repos.items">
         ID: {{ repo.id }}
+        NAME: {{ repo.name }}
     </div>
 </div>
