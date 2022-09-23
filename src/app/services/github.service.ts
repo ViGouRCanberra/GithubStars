@@ -7,7 +7,8 @@ import { RepoData } from '../structures/repoData';
   providedIn: 'root'
 })
 export class GithubService {
-  private githubEndpoint = 'https://api.github.com/search/repositories?q=created:>2017-10-22&sort=stars&order=desc';
+  //private githubEndpoint = 'https://api.github.com/search/repositories?q=created:>2017-10-22&sort=stars&order=desc';
+  private githubEndpoint = '/assets/github-example.json';
 
   constructor(
     private http: HttpClient

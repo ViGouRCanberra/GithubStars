@@ -1,6 +1,7 @@
-<div *ngIf="repos">
+<div *ngIf="repos != undefined">
     <div *ngFor="let repo of repos.items">
-        ID: {{ repo.id }}
-        NAME: {{ repo.name }}
+        <app-repo-card
+            [repo]="repo"
+        ></app-repo-card>
     </div>
 </div>
