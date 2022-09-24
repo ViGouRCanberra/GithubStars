@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { GithubService } from '../services/github.service';
 import { RepoData } from '../structures/repoData';
+import { Repo } from '../structures/repo';
 
 @Component({
   selector: 'app-github-stars',
@@ -8,6 +9,7 @@ import { RepoData } from '../structures/repoData';
   styleUrls: ['./github-stars.component.css']
 })
 export class GithubStarsComponent implements OnInit {
+  private currentPage: number = 1;
   repos: RepoData;
 
   constructor(
@@ -15,12 +17,15 @@ export class GithubStarsComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.githubService.getGithubRepoInfo().subscribe((data) => this.repos = data);
+    this.githubService.getGithubRepoInfo(this.currentPage).subscribe((data) => this.repos = data);
   }
 
   onScroll() {
-    console.log('scrolled!!');
-
-    //TODO Implement calling githubService with a page counter
+    this.currentPage++;
+    this.githubService.getGithubRepoInfo(this.currentPage).subscribe((data) => {
+      data.items.forEach(element => {
+        this.repos.items.push(element);
+      });
+    });
   }
 }
